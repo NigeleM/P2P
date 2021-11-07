@@ -81,15 +81,23 @@ def map_network(pool_size=255):
 
 # My code
 def connect(lst):
+    contacts = {}
+    data =[]
     for data in lst:
         try:
             print(socket.gethostbyaddr(data))
+            data=socket.gethostbyaddr(data)
+            contacts[data[0]] = data[2][0] 
         except socket.herror as error:
             pass
                 
-                
+    #print("\n",contacts)
         
-        
+    with open("./htdocs/contacts.log","w") as file:
+        for key, value in contacts.items():
+            file.write(str(key)+" : "+str(value)+"\n")
+
+    print("Contact log created")
 
 
 if __name__ == '__main__':
