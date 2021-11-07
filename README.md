@@ -6,3 +6,8 @@ Python and Golang P2P applications
 In my journey to learn more about distributed systems and decentralized systems.
 I have decided to develop a few P2P applications in python and go.
 Currently working on a python P2P communcations app.
+
+# V1
+-> Operational
+
+# Updates and How to use coming soon. 
